@@ -432,6 +432,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  devise (~> 4.9)
   devise_token_auth!
   importmap-rails
   jbuilder
