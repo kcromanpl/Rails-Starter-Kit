@@ -31,6 +31,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
                                                   scope: "email name",
                                                   team_id: APPLE_CREDENTIALS[:key],
                                                   key_id: APPLE_CREDENTIALS[:key],
-                                                  pem: APPLE_CREDENTIALS[:key],
+                                                  pem: APPLE_CREDENTIALS[:key]
                                                 }
 end
