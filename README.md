@@ -23,6 +23,12 @@ Things you may want to cover:
 
 * ...
 
+## Docker
+```
+docker build -t rails-starter-kit .
+docker run -it -p 3000:3000 rails-starter-kit
+```
+
 ## Background
 
 In our team, we’re always brainstorming fresh ideas and new apps to build. To support fast scaling, we need a streamlined way to implement business logic without handling repetitive setup tasks.
