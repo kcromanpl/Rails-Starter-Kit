@@ -2,25 +2,25 @@
 
 # Omniauth strategies for GitHub, Facebook, Google, and Apple
 GITHUB_CREDENTIALS = {
-  key: Rails.application.credentials.github[:key],
-  secret: Rails.application.credentials.github[:secret]
+  key: Rails.application.credentials.dig(:github, :key),
+  secret: Rails.application.credentials.dig(:github, :secret)
 }.freeze
 
 FACEBOOK_CREDENTIALS = {
-  key: Rails.application.credentials.facebook[:key],
-  secret: Rails.application.credentials.facebook[:secret]
+  key: Rails.application.credentials.dig(:facebook, :key),
+  secret: Rails.application.credentials.dig(:facebook, :secret)
 }.freeze
 
 GOOGLE_CREDENTIALS = {
-  key: Rails.application.credentials.google[:key],
-  secret: Rails.application.credentials.google[:secret]
+  key: Rails.application.credentials.dig(:google, :key),
+  secret: Rails.application.credentials.dig(:google, :secret)
 }.freeze
 
 APPLE_CREDENTIALS = {
-  client_id: Rails.application.credentials.apple[:client_id],
-  team_id: Rails.application.credentials.apple[:team_id],
-  key: Rails.application.credentials.apple[:key],
-  pem: Rails.application.credentials.apple[:pem]
+  client_id: Rails.application.credentials.dig(:apple, :client_id),
+  team_id: Rails.application.credentials.dig(:apple, :team_id),
+  key: Rails.application.credentials.dig(:apple, :key),
+  pem: Rails.application.credentials.dig(:apple, :pem)
 }.freeze
 
 Rails.application.config.middleware.use OmniAuth::Builder do
