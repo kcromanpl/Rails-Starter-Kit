@@ -29,6 +29,12 @@ docker build -t rails-starter-kit .
 docker run -it -p 3000:3000 rails-starter-kit
 ```
 
+## Rails Secret
+```
+VISUAL="code --wait" bin/rails credentials:edit
+VISUAL="code --wait" bin/rails credentials:edit --environment test
+```
+
 ## Background
 
 In our team, we’re always brainstorming fresh ideas and new apps to build. To support fast scaling, we need a streamlined way to implement business logic without handling repetitive setup tasks.

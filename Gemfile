@@ -40,6 +40,19 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# flexible authentication solution for Rails based on Warden
+gem "devise", "~> 4.9"
+# Simple, multi-client and secure token-based authentication for Rails
+# NOTE: https://github.com/lynndylanhurley/devise_token_auth/issues/1642
+#       Lock version when the issue is resolved
+gem "devise_token_auth", github: "lynndylanhurley/devise_token_auth", branch: "master"
+
+# Omniauth strategies for GitHub, Facebook, Google, and Apple
+gem "omniauth-github"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
+gem "omniauth-apple"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
